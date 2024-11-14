@@ -3,11 +3,14 @@ import sys
 outputhtmlfilename = 'out.html'
 
 def writehtmlline(filename, linedata):
-    with open('htmloutput.html','a+') as htmlfile:
+    with open(filename,'a+') as htmlfile:
         htmlfile.write(linedata+'\n')
 
 with open(sys.argv[1], 'r') as mdfile:
     mdlines = mdfile.read().split('\n')
+
+with open(outputhtmlfilename,'w') as htmlfile:
+    htmlfile.write('')
 
 for line in mdlines:
     # heading parsing
