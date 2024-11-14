@@ -12,20 +12,30 @@ with open(sys.argv[1], 'r') as mdfile:
 for line in mdlines:
     # heading parsing
     if line[:7] == '###### ':
-        html = f'<h6>{line.split('###### ')[1]}<h6><br>'
+        html = f'<h6>{line.split('###### ')[1]}<h6>'
         writehtmlline(outputhtmlfilename, html)
     elif line[:6] == '##### ':
-        html = f'<h5>{line.split('##### ')[1]}<h5><br>'
+        html = f'<h5>{line.split('##### ')[1]}<h5>'
         writehtmlline(outputhtmlfilename, html)
     elif line[:5] == '#### ':
-        html = f'<h4>{line.split('#### ')[1]}<h4><br>'
+        html = f'<h4>{line.split('#### ')[1]}<h4>'
         writehtmlline(outputhtmlfilename, html)
     elif line[:4] == '### ':
-        html = f'<h3>{line.split('### ')[1]}<h3><br>'
+        html = f'<h3>{line.split('### ')[1]}<h3>'
         writehtmlline(outputhtmlfilename, html)
     elif line[:3] == '## ':
-        html = f'<h2>{line.split('## ')[1]}<h2><br>'
+        html = f'<h2>{line.split('## ')[1]}<h2>'
         writehtmlline(outputhtmlfilename, html)
     elif line[:2] == '# ':
-        html = f'<h1>{line.split('# ')[1]}<h1><br>'
+        html = f'<h1>{line.split('# ')[1]}<h1>'
         writehtmlline(outputhtmlfilename, html)
+
+    # ordered list parsing
+
+    # unordered list parsing
+
+    # images/links parsing
+
+    # code parsing
+
+    # escape chars
